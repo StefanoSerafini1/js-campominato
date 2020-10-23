@@ -6,8 +6,8 @@
 // o raggiunge il numero massimo possibile di numeri consentiti.
 //Al termine della partita il software deve comunicare il punteggio
 
-var maxnumeri = 5;
-var bombe = 2;
+var maxnumeri = 100;
+var bombe = 16;
 
 
 var arraybombe = funzionebombe(maxnumeri, bombe );
@@ -34,7 +34,7 @@ while ( ( bombabeccata === false ) && (tentativi < maxtentativi) ) {
   // Se utente becca bomba, loop si ferma
   if ( seinarray(numutente, arraybombe) === true ) {
     bombabeccata = true;
-    console.log('hai beccato una bomba dopo ' + tentativi + 'tentativo/i');
+    console.log('hai beccato una bomba dopo ' + tentativi + ' tentativo/i');
   }
 }
 
