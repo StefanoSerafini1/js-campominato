@@ -17,3 +17,19 @@ var maxtentativi = maxnumeri - bombe;
 
 console.log(arraybombe);
 console.log(maxtentativi);
+
+
+
+
+//funzione per crezione array bombe
+function funzionebombe(maxnumeri, bombe) {
+  var randombombe = [];
+  while (randombombe.length < bombe) {
+    var numerorandom = Math.floor(Math.random() * ( maxnumeri - 1 )) + 1;
+//richiamo della funzione per controllare se elemento è presente nel array
+    if (seinarray(numerorandom, randombombe) === false) {
+      randombombe.push(numerorandom);
+    }
+  }
+  return randombombe;
+}
