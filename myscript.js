@@ -21,9 +21,11 @@ console.log(maxtentativi);
 var tentativi = 0;      // n° tentativi e quindi punteggio
 var bombabeccata = false;
 var tentativiutente=[];
-
+//ciclo while che si interrompe se becchi una bomba oppuure
+//se il numero dei tentativi raggiunge il massimo dei tentativi e quindi vinci
 while ( ( bombabeccata === false ) && (tentativi < maxtentativi) ) {
   var numutente = parseInt(prompt('Inserisci un numero da 1 a ' + maxnumeri));
+  //controllo con if se valore inserito è già stato inserito in precedenza
   if(!tentativiutente.includes(numutente)){
      tentativiutente.push(numutente);
      tentativi++;
@@ -35,6 +37,7 @@ while ( ( bombabeccata === false ) && (tentativi < maxtentativi) ) {
   if ( seinarray(numutente, arraybombe) === true ) {
     bombabeccata = true;
     console.log('hai beccato una bomba dopo ' + tentativi + ' tentativo/i');
+    
   }
 }
 
